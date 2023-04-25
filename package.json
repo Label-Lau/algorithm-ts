@@ -1,0 +1,29 @@
+{
+  "name": "algorithm-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --config ./config/webpack.config.js",
+    "build": "webpack --config ./config/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@types/jest": "^29.5.1",
+    "babel-jest": "^29.5.0",
+    "html-webpack-plugin": "^5.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3"
+  }
+}
