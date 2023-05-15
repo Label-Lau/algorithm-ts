@@ -1,1 +1,1 @@
-console.log('hello word')
+import './tree/tree-to-arr'
