@@ -20,22 +20,15 @@ export class MyQueue {
     add(n: number) {
         const newNode: IListNode = {
             value: n,
-            next: null,
+            next: null
         }
-
-        // 处理 head
-        if (this.head == null) {
+        if (!this.head) {
             this.head = newNode
         }
-
-        // 处理 tail
-        const tailNode = this.tail
-        if (tailNode) {
-            tailNode.next = newNode
+        if (this.tail) {
+            this.tail.next = newNode
         }
         this.tail = newNode
-
-        // 记录长度
         this.len++
     }
 
@@ -43,19 +36,10 @@ export class MyQueue {
      * 出队，在 head 位置
      */
     delete(): number | null {
-        const headNode = this.head
-        if (headNode == null) return null
-        if (this.len <= 0) return null
-
-        // 取值
-        const value = headNode.value
-
-        // 处理 head
-        this.head = headNode.next
-
-        // 记录长度
+        if (!this.head || this.len <= 0) return null
+        const value = this.head.value
+        this.head = this.head.next
         this.len--
-
         return value
     }
 

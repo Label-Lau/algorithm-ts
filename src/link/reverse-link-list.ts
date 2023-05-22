@@ -9,8 +9,10 @@ export interface ILinkListNode {
 }
 
 /**
- * 根据数组创建单向链表
- * @param arr number arr
+ * Creates a linked list from an array of numbers.
+ * @param {number[]} arr - The array of numbers to create the linked list from.
+ * @returns {ILinkListNode} - The head node of the linked list.
+ * @throws {Error} - Throws an error if the input array is empty.
  */
 export function createLinkList(arr: number[]): ILinkListNode {
     const len = arr.length
@@ -18,25 +20,24 @@ export function createLinkList(arr: number[]): ILinkListNode {
     let cur: ILinkListNode = {
         value: arr[len - 1]
     }
-    if (len === 1) return cur
     for (let i = len - 2; i >= 0; i--) {
         cur = {
             value: arr[i],
             next: cur
-		}
-	}
-	return cur
+        }
+    }
+    return cur
 }
 
 /**
- * 反转单向链表，并返回反转之后的 head node
- * @param listNode list head node
+ * Reverses a linked list.
+ * @param {ILinkListNode} listNode - The head node of the linked list.
+ * @returns {ILinkListNode} - The head node of the reversed linked list.
  */
 export function reverseLinkList(listNode: ILinkListNode): ILinkListNode {
-    if (!listNode.next) return listNode // 不需要反转
+    if (!listNode.next) return listNode
     let cur = listNode
     let prev = null
-
     while (cur) {
         const temp = cur.next
         if (!prev) {

@@ -4,14 +4,14 @@
  */
 
 /**
- * 旋转数组 k 步 - 使用 pop 和 unshift
- * @param arr arr
- * @param k k
- * @returns arr
+ * 将数组向右旋转指定步数。
+ * @param {number[]} arr - 要旋转的数组。
+ * @param {number} k - 旋转步数。
+ * @returns {number[]} - 旋转后的数组。
  */
 export function rotate1(arr: number[], k: number): number[] {
     const len = arr.length
-    if (!len || !k) return arr
+    if (!k || !len) return arr
     const step = Math.abs(k % len)
     for (let i = 0; i < step; i++) {
         const tail = arr.pop()
@@ -23,15 +23,15 @@ export function rotate1(arr: number[], k: number): number[] {
 }
 
 /**
- * 旋转数组 k 步 - 使用 concat
- * @param arr arr
- * @param k k
+ * 将数组向右旋转指定步数。
+ * @param {number[]} arr - 要旋转的数组。
+ * @param {number} k - 旋转步数。
+ * @returns {number[]} - 旋转后的数组。
  */
 export function rotate2(arr: number[], k: number): number[] {
     const len = arr.length
     if (!len || !k) return arr
     const step = Math.abs(k % len)
-
     const arr1 = arr.slice(0, len - step)
     const arr2 = arr.slice(-step)
     return arr2.concat(arr1)

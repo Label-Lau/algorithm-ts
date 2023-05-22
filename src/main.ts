@@ -1,1 +1,1 @@
-import './tree/tree-to-arr'
+import './string/continuous-char'

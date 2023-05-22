@@ -91,6 +91,6 @@ const arr =
         { id: 6, name: '部门F', parentId: 3 },
         { id: 7, name: '部门A2', parentId: 0 }
     ]
-debugger
+
 const tree = convert(arr)
 console.info(tree)

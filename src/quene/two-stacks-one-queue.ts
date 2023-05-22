@@ -20,16 +20,16 @@ export class MyQueue {
      */
     delete(): number | null {
         while (this.stack1.length) {
-            const tail = this.stack1.pop()
-            if (tail != null) {
-                this.stack2.push(tail)
+            const head = this.stack1.shift()
+            if (head != null) {
+                this.stack2.push(head)
             }
         }
-        const res = this.stack2.pop() || null
+        const res = this.stack2.shift() || null
         while (this.stack2.length) {
-            const tail = this.stack2.pop()
-            if (tail != null) {
-                this.stack1.push(tail)
+            const head = this.stack2.shift()
+            if (head != null) {
+                this.stack1.push(head)
             }
         }
         return res
