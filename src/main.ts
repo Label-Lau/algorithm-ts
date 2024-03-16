@@ -1,1 +1,1 @@
-import './string/continuous-char'
+import './array/binarySearch'
