@@ -1,7 +1,7 @@
 /**
  * description [] => 左闭右闭法
  */
-function binarySearch(nums: Array<number>, target: number) {
+export function binarySearch(nums: Array<number>, target: number) {
     let left = 0
     let right = nums.length - 1
 
