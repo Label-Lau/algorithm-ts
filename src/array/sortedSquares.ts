@@ -1,3 +1,6 @@
+/**
+ * description 双指针写法
+ */
 export function sortedSquares(nums: number[]): number[] {
     const result: number[] = []
     let k = nums.length - 1
@@ -10,3 +13,10 @@ export function sortedSquares(nums: number[]): number[] {
     }
     return result
 }
+
+/**
+ * description 暴力解法
+ */
+// export function sortedSquares(nums: number[]): number[] {
+//     return nums.map((num) => num ** 2).sort((a, b) => a - b)
+// }
